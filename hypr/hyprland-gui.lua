@@ -15,12 +15,13 @@ hl.config({
             size = 8,
             vibrancy = 0.02,
         },
-        rounding = 15,
+        rounding = 0,
     },
     general = {
+        border_size = 3,
         col = {
-            active_border = "0xff241f31",
-            inactive_border = "0xff3d3846",
+            active_border = "0xff89b4fa",
+            inactive_border = "0xff62a0ea",
         },
         resize_on_border = true,
     },
@@ -32,3 +33,7 @@ hl.config({
         vrr = 0,
     },
 })
+
+-- Keybinds
+hl.unbind("SUPER + F")
+hl.bind("SUPER + F", hl.dsp.window.float({ action = "toggle" }))

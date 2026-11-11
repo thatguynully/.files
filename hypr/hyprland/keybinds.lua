@@ -1,8 +1,8 @@
--- ghostty keybind
+-- kitty keybind
 hl.bind("SUPER + T", hl.dsp.exec_cmd("kitty"))
 
--- firefox
-hl.bind("SUPER + SHIFT + F", hl.dsp.exec_cmd("firefox"))
+-- better firefox
+hl.bind("SUPER + SHIFT + Z", hl.dsp.exec_cmd("flatpak run app.zen_browser.zen"))
 
 -- text picker thing
 hl.bind("SUPER + O", hl.dsp.exec_cmd("flatpak run com.github.dynobo.normcap"))
@@ -28,8 +28,22 @@ hl.bind("SUPER + 0", hl.dsp.focus({ workspace = "10" }))
 
 
 -- close windows
-hl.bind("SUPER + Q", hl.dsp.exec_cmd("hyprctl kill"))
+hl.bind("SUPER + Q", hl.dsp.window.close())
+
+-- make it fullscreen!
+hl.bind("SUPER + CTRL + F", hl.dsp.window.fullscreen({
+    action = "toggle"
+}))
 
 -- resize windows
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+--prolly the jankest solution to a logout screen when you press the power bttton
+hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout"))
+
+
+--media control
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("amixer -D pulse sset Master 5%+"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("amixer -D pulse sset Master 5%-"))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("omnipause pause"))
