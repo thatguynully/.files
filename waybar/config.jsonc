@@ -163,7 +163,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 600,
-    "exec": "wttrbar --nerd --location 'Nova Friburgo' ",
+    "exec": "wttrbar --nerd --location 'Privacy, Please!' ",
     "return-type": "json"
   },
 
