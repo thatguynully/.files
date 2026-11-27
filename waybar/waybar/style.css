@@ -1,0 +1,70 @@
+* {
+font-family: "Hurmit Nerd Font";
+font-size: 13px;
+min-height: 0;
+}
+
+window#waybar {
+  background: #1e1e2e;
+  color: #cdd6f4;
+}
+
+#workspaces,
+#window,
+#clock,
+#custom-weather,
+#memory,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio,
+#cpu,
+#battery,
+#tray,
+#mpris {
+padding: 0 8px;
+margin: 3px 2px;
+background: #313244;
+border-radius: 6px;
+}
+
+#workspaces button {
+color: #cdd6f4;
+padding: 0 5px;
+background: transparent;
+border: none;
+}
+
+#workspaces button.active {
+color: #a6e3a1;
+}
+
+#workspaces button:hover {
+background: #45475a;
+box-shadow: none;
+}
+
+#clock {
+color: #89b4fa;
+}
+
+#cpu {
+color: #f9e2af;
+}
+
+#memory {
+color: #cba6f7;
+}
+
+#network {
+color: #94e2d5;
+}
+
+#pulseaudio {
+color: #f5c2e7;
+}
+
+
+#window {
+background: transparent;
+}
